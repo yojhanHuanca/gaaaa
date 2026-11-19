@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="login-nav">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="scene-login-nav">
+            <objects>
+                <navigationController storyboardIdentifier="LoginNavigation" id="login-nav" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="login-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="login-vc" kind="relationship" relationship="rootViewController" id="login-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="login-first" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1600" y="-300"/>
+        </scene>
+        <!--Ventas-->
+        <scene sceneID="scene-login">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="login-vc" customClass="ViewController" customModule="Ventas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="login-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="🛒" textAlignment="center" lineBreakMode="tailTruncation" id="login-icon">
+                                <rect key="frame" x="157" y="90" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ventas Tecsup" textAlignment="center" lineBreakMode="tailTruncation" id="login-title">
+                                <rect key="frame" x="30" y="185" width="333" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Inicia sesión para continuar" textAlignment="center" lineBreakMode="tailTruncation" id="login-subtitle">
+                                <rect key="frame" x="30" y="230" width="333" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" id="login-username">
+                                <rect key="frame" x="28" y="290" width="337" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clave" id="login-password">
+                                <rect key="frame" x="28" y="360" width="337" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" id="login-error">
+                                <rect key="frame" x="30" y="420" width="333" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="login-submit">
+                                <rect key="frame" x="28" y="455" width="337" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Ingresar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginTapped:" destination="login-vc" eventType="touchUpInside" id="login-submit-action"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="login-register">
+                                <rect key="frame" x="28" y="530" width="337" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="¿Primera vez? Crear cuenta">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerTapped:" destination="login-vc" eventType="touchUpInside" id="login-register-action"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Demo: carlos / 123456 · supervisor / 123456" textAlignment="center" lineBreakMode="tailTruncation" id="login-demo">
+                                <rect key="frame" x="25" y="590" width="343" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="login-safe"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ventas" id="login-nav-item"/>
+                    <connections>
+                        <outlet property="errorLabel" destination="login-error" id="login-e-out"/>
+                        <outlet property="passwordField" destination="login-password" id="login-p-out"/>
+                        <outlet property="usernameField" destination="login-username" id="login-u-out"/>
+                        <segue destination="register-vc" kind="show" identifier="showRegister" id="to-register"/>
+                        <segue destination="tabs-vc" kind="show" identifier="showMain" id="login-to-tabs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="login-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900" y="-300"/>
+        </scene>
+        <!--Crear cuenta-->
+        <scene sceneID="scene-register">
+            <objects>
+                <viewController storyboardIdentifier="Register" id="register-vc" customClass="RegisterViewController" customModule="Ventas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="register-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Crear cuenta" textAlignment="center" lineBreakMode="tailTruncation" id="reg-title">
+                                <rect key="frame" x="28" y="90" width="337" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Registra tus datos y elige tu rol" textAlignment="center" lineBreakMode="tailTruncation" id="reg-subtitle">
+                                <rect key="frame" x="28" y="134" width="337" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre completo" id="reg-name">
+                                <rect key="frame" x="28" y="188" width="337" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" id="reg-user">
+                                <rect key="frame" x="28" y="256" width="337" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Usuario disponible" lineBreakMode="tailTruncation" id="reg-available">
+                                <rect key="frame" x="30" y="310" width="330" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clave (mínimo 6)" id="reg-password">
+                                <rect key="frame" x="28" y="340" width="337" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar clave" id="reg-confirm">
+                                <rect key="frame" x="28" y="406" width="337" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="TU ROL" lineBreakMode="tailTruncation" id="reg-role-label">
+                                <rect key="frame" x="30" y="478" width="330" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="reg-role">
+                                <rect key="frame" x="28" y="504" width="337" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Vendedor"/>
+                                    <segment title="Supervisor"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" id="reg-error">
+                                <rect key="frame" x="30" y="556" width="330" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="reg-submit">
+                                <rect key="frame" x="28" y="594" width="337" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Registrarme">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerTapped:" destination="register-vc" eventType="touchUpInside" id="act-register"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="reg-safe"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Crear cuenta" id="reg-nav-item"/>
+                    <connections>
+                        <outlet property="availableLabel" destination="reg-available" id="reg-available-out"/>
+                        <outlet property="confirmationField" destination="reg-confirm" id="reg-confirm-out"/>
+                        <outlet property="errorLabel" destination="reg-error" id="reg-error-out"/>
+                        <outlet property="nameField" destination="reg-name" id="reg-name-out"/>
+                        <outlet property="passwordField" destination="reg-password" id="reg-password-out"/>
+                        <outlet property="roleControl" destination="reg-role" id="reg-role-out"/>
+                        <outlet property="usernameField" destination="reg-user" id="reg-user-out"/>
+                        <segue destination="tabs-vc" kind="show" identifier="showMain" id="register-to-tabs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reg-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="-300"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="scene-tabs">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabs" id="tabs-vc" customClass="MainTabBarController" customModule="Ventas" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="main-tabbar">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nav-products" kind="relationship" relationship="viewControllers" id="tab-link-products"/>
+                        <segue destination="nav-clients" kind="relationship" relationship="viewControllers" id="tab-link-clients"/>
+                        <segue destination="nav-new-sale" kind="relationship" relationship="viewControllers" id="tab-link-newsale"/>
+                        <segue destination="nav-sales" kind="relationship" relationship="viewControllers" id="tab-link-sales"/>
+                        <segue destination="nav-dashboard" kind="relationship" relationship="viewControllers" id="tab-link-dashboard"/>
+                        <segue destination="nav-account" kind="relationship" relationship="viewControllers" id="tab-link-account"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tabs-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="-300"/>
+        </scene>
+        <!--Productos-->
+        <scene sceneID="scene-products">
+            <objects>
+                <viewController storyboardIdentifier="Products" id="products-vc" customClass="ProductsViewController" customModule="Ventas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="products-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Productos" textAlignment="center" lineBreakMode="tailTruncation" id="products-title">
+                                <rect key="frame" x="24" y="98" width="345" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            </label>
+                            <searchBar contentMode="redraw" placeholder="Buscar producto" id="products-search">
+                                <rect key="frame" x="16" y="152" width="361" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="products-categories">
+                                <rect key="frame" x="16" y="210" width="361" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Todos"/>
+                                    <segment title="Laptops"/>
+                                    <segment title="Monitores"/>
+                                    <segment title="Accesorios"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filterChanged:" destination="products-vc" eventType="valueChanged" id="act-product-filter"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="products-table">
+                                <rect key="frame" x="0.0" y="262" width="393" height="522"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product-1" textLabel="products-table-prototype-1-title" detailTextLabel="products-table-prototype-1-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="products-table-prototype-1">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="products-table-prototype-1" id="products-table-prototype-1-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Laptop Pro 14" lineBreakMode="tailTruncation" id="products-table-prototype-1-title">
+                                                    <rect key="frame" x="15.999999999999993" y="10.333333333333336" width="101.33333333333333" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Laptops · S/ 200.00 · 40 u." lineBreakMode="tailTruncation" id="products-table-prototype-1-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="150.66666666666666" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="products-table-prototype-1-detail" id="products-table-prototype-1-detail-out"/>
+                                            <outlet property="textLabel" destination="products-table-prototype-1-title" id="products-table-prototype-1-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product-2" textLabel="products-table-prototype-2-title" detailTextLabel="products-table-prototype-2-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="products-table-prototype-2">
+                                        <rect key="frame" x="20" y="113.33333206176758" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="products-table-prototype-2" id="products-table-prototype-2-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Monitor 24”" lineBreakMode="tailTruncation" id="products-table-prototype-2-title">
+                                                    <rect key="frame" x="16" y="10.333333333333336" width="88" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Monitores · S/ 450.00 · 9 u." lineBreakMode="tailTruncation" id="products-table-prototype-2-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="154" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="products-table-prototype-2-detail" id="products-table-prototype-2-detail-out"/>
+                                            <outlet property="textLabel" destination="products-table-prototype-2-title" id="products-table-prototype-2-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product-3" textLabel="products-table-prototype-3-title" detailTextLabel="products-table-prototype-3-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="products-table-prototype-3">
+                                        <rect key="frame" x="20" y="171.33333206176758" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="products-table-prototype-3" id="products-table-prototype-3-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Mouse inalámbrico" lineBreakMode="tailTruncation" id="products-table-prototype-3-title">
+                                                    <rect key="frame" x="16" y="10.333333333333336" width="138.33333333333334" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Accesorios · S/ 35.00 · 120 u." lineBreakMode="tailTruncation" id="products-table-prototype-3-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="164.66666666666666" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="products-table-prototype-3-detail" id="products-table-prototype-3-detail-out"/>
+                                            <outlet property="textLabel" destination="products-table-prototype-3-title" id="products-table-prototype-3-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product-4" textLabel="products-table-prototype-4-title" detailTextLabel="products-table-prototype-4-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="products-table-prototype-4">
+                                        <rect key="frame" x="20" y="229.33333206176758" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="products-table-prototype-4" id="products-table-prototype-4-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Teclado mecánico" lineBreakMode="tailTruncation" id="products-table-prototype-4-title">
+                                                    <rect key="frame" x="16" y="10.333333333333336" width="131.33333333333334" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Accesorios · S/ 129.90 · 4 u." lineBreakMode="tailTruncation" id="products-table-prototype-4-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="157.66666666666666" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="products-table-prototype-4-detail" id="products-table-prototype-4-detail-out"/>
+                                            <outlet property="textLabel" destination="products-table-prototype-4-title" id="products-table-prototype-4-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="products-add-button">
+                                <rect key="frame" x="335" y="87" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addProduct:" destination="products-vc" eventType="touchUpInside" id="act-product-add-button"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="products-safe"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Productos" id="products-nav"/>
+                    <connections>
+                        <outlet property="addButton" destination="products-add-button" id="products-add-button-out"/>
+                        <outlet property="categoryControl" destination="products-categories" id="p-cat-out"/>
+                        <outlet property="searchBar" destination="products-search" id="p-search-out"/>
+                        <outlet property="table" destination="products-table" id="p-table-out"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="products-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="1350"/>
+        </scene>
+        <!--Clientes-->
+        <scene sceneID="scene-clients">
+            <objects>
+                <viewController storyboardIdentifier="Clients" id="clients-vc" customClass="ClientsViewController" customModule="Ventas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="clients-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Clientes" textAlignment="center" lineBreakMode="tailTruncation" id="clients-title">
+                                <rect key="frame" x="24" y="98" width="345" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            </label>
+                            <searchBar contentMode="redraw" placeholder="Buscar por nombre o documento" id="clients-search">
+                                <rect key="frame" x="16" y="152" width="361" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="clients-table">
+                                <rect key="frame" x="0.0" y="212" width="393" height="572"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="client-1" textLabel="clients-table-prototype-1-title" detailTextLabel="clients-table-prototype-1-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="clients-table-prototype-1">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="clients-table-prototype-1" id="clients-table-prototype-1-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Comercial Andina SAC" lineBreakMode="tailTruncation" id="clients-table-prototype-1-title">
+                                                    <rect key="frame" x="16" y="10.333333333333336" width="163.66666666666666" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="RUC 20000000001 · S/ 6,240 · VIP" lineBreakMode="tailTruncation" id="clients-table-prototype-1-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="196.66666666666666" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="clients-table-prototype-1-detail" id="clients-table-prototype-1-detail-out"/>
+                                            <outlet property="textLabel" destination="clients-table-prototype-1-title" id="clients-table-prototype-1-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="client-2" textLabel="clients-table-prototype-2-title" detailTextLabel="clients-table-prototype-2-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="clients-table-prototype-2">
+                                        <rect key="frame" x="20" y="113.33333206176758" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="clients-table-prototype-2" id="clients-table-prototype-2-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="María Quispe" lineBreakMode="tailTruncation" id="clients-table-prototype-2-title">
+                                                    <rect key="frame" x="16" y="10.333333333333336" width="96" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="DNI 00000001 · S/ 1,830 · Frecuente" lineBreakMode="tailTruncation" id="clients-table-prototype-2-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="206" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="clients-table-prototype-2-detail" id="clients-table-prototype-2-detail-out"/>
+                                            <outlet property="textLabel" destination="clients-table-prototype-2-title" id="clients-table-prototype-2-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="client-3" textLabel="clients-table-prototype-3-title" detailTextLabel="clients-table-prototype-3-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="clients-table-prototype-3">
+                                        <rect key="frame" x="20" y="171.33333206176758" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="clients-table-prototype-3" id="clients-table-prototype-3-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Luis Rojas" lineBreakMode="tailTruncation" id="clients-table-prototype-3-title">
+                                                    <rect key="frame" x="16" y="10.333333333333336" width="74" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="DNI 00000002 · S/ 310 · Regular" lineBreakMode="tailTruncation" id="clients-table-prototype-3-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="183.66666666666666" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="clients-table-prototype-3-detail" id="clients-table-prototype-3-detail-out"/>
+                                            <outlet property="textLabel" destination="clients-table-prototype-3-title" id="clients-table-prototype-3-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="client-4" textLabel="clients-table-prototype-4-title" detailTextLabel="clients-table-prototype-4-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="clients-table-prototype-4">
+                                        <rect key="frame" x="20" y="229.33333206176758" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="clients-table-prototype-4" id="clients-table-prototype-4-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Tienda Sol EIRL" lineBreakMode="tailTruncation" id="clients-table-prototype-4-title">
+                                                    <rect key="frame" x="16.000000000000007" y="10.333333333333336" width="112.66666666666667" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="RUC 20000000044 · S/ 0 · Regular" lineBreakMode="tailTruncation" id="clients-table-prototype-4-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="198" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="clients-table-prototype-4-detail" id="clients-table-prototype-4-detail-out"/>
+                                            <outlet property="textLabel" destination="clients-table-prototype-4-title" id="clients-table-prototype-4-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Categoría y total comprado según ventas no anuladas." lineBreakMode="tailTruncation" numberOfLines="0" id="clients-note">
+                                <rect key="frame" x="20" y="740" width="353" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="clients-add-button">
+                                <rect key="frame" x="335" y="87" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addClient:" destination="clients-vc" eventType="touchUpInside" id="act-client-add-button"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="clients-safe"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Clientes" id="clients-nav"/>
+                    <connections>
+                        <outlet property="addButton" destination="clients-add-button" id="clients-add-button-out"/>
+                        <outlet property="noteLabel" destination="clients-note" id="c-note-out"/>
+                        <outlet property="searchBar" destination="clients-search" id="c-search-out"/>
+                        <outlet property="table" destination="clients-table" id="c-table-out"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="clients-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950" y="1350"/>
+        </scene>
+        <!--Venta-->
+        <scene sceneID="scene-newsale">
+            <objects>
+                <viewController storyboardIdentifier="NewSale" id="newsale-vc" customClass="NewSaleViewController" customModule="Ventas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="newsale-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Nueva venta" textAlignment="center" lineBreakMode="tailTruncation" id="newsale-title">
+                                <rect key="frame" x="24" y="98" width="345" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Carlos Ruiz · Vendedor" lineBreakMode="tailTruncation" id="newsale-session">
+                                <rect key="frame" x="22" y="151" width="349" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88" green="0.93000000000000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="newsale-client">
+                                <rect key="frame" x="20" y="219" width="353" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cliente  ›">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseClient:" destination="newsale-vc" eventType="touchUpInside" id="act-sale-client"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="newsale-product">
+                                <rect key="frame" x="20" y="281" width="353" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Producto  ›">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseProduct:" destination="newsale-vc" eventType="touchUpInside" id="act-sale-product"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" id="newsale-stepper">
+                                <rect key="frame" x="254" y="348" width="110" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="quantityChanged:" destination="newsale-vc" eventType="valueChanged" id="act-sale-qty"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Cantidad (stock 40)" lineBreakMode="tailTruncation" id="newsale-quantity">
+                                <rect key="frame" x="24" y="348" width="220" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" id="newsale-summary">
+                                <rect key="frame" x="25" y="410" width="343" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <string key="text">Subtotal   S/ 400.00
+Descuento VIP   − S/ 40.00
+IGV 18%   S/ 64.80
+TOTAL   S/ 424.80</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="newsale-submit">
+                                <rect key="frame" x="20" y="633" width="353" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Registrar venta">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerSale:" destination="newsale-vc" eventType="touchUpInside" id="act-sale-register"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="newsale-safe"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Venta" id="newsale-nav"/>
+                    <connections>
+                        <outlet property="clientButton" destination="newsale-client" id="n-client-out"/>
+                        <outlet property="productButton" destination="newsale-product" id="n-product-out"/>
+                        <outlet property="quantityLabel" destination="newsale-quantity" id="n-qty-out"/>
+                        <outlet property="quantityStepper" destination="newsale-stepper" id="n-step-out"/>
+                        <outlet property="registerButton" destination="newsale-submit" id="n-submit-out"/>
+                        <outlet property="sellerLabel" destination="newsale-session" id="n-seller-out"/>
+                        <outlet property="summaryLabel" destination="newsale-summary" id="n-summary-out"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="newsale-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2600" y="1350"/>
+        </scene>
+        <!--Mis ventas-->
+        <scene sceneID="scene-sales">
+            <objects>
+                <viewController storyboardIdentifier="Sales" id="sales-vc" customClass="SalesListViewController" customModule="Ventas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sales-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Mis ventas" textAlignment="center" lineBreakMode="tailTruncation" id="sales-title">
+                                <rect key="frame" x="24" y="98" width="345" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="1" id="sales-period">
+                                <rect key="frame" x="16" y="203" width="361" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Todas"/>
+                                    <segment title="Hoy"/>
+                                    <segment title="Mes"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filtersChanged:" destination="sales-vc" eventType="valueChanged" id="act-sales-filter"/>
+                                </connections>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" placeholder="Buscar por cliente" id="sales-search">
+                                <rect key="frame" x="16" y="298" width="361" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sales-table">
+                                <rect key="frame" x="0.0" y="350" width="393" height="434"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sale-1" textLabel="sales-table-prototype-1-title" detailTextLabel="sales-table-prototype-1-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="sales-table-prototype-1">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sales-table-prototype-1" id="sales-table-prototype-1-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Comercial Andina SAC     S/ 424.80" lineBreakMode="tailTruncation" id="sales-table-prototype-1-title">
+                                                    <rect key="frame" x="16" y="10.333333333333336" width="254" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="03/11 · Laptop Pro 14 × 2" lineBreakMode="tailTruncation" id="sales-table-prototype-1-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="140.33333333333334" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="sales-table-prototype-1-detail" id="sales-table-prototype-1-detail-out"/>
+                                            <outlet property="textLabel" destination="sales-table-prototype-1-title" id="sales-table-prototype-1-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sale-2" textLabel="sales-table-prototype-2-title" detailTextLabel="sales-table-prototype-2-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="sales-table-prototype-2">
+                                        <rect key="frame" x="20" y="113.33333206176758" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sales-table-prototype-2" id="sales-table-prototype-2-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Luis Rojas     S/ 123.90" lineBreakMode="tailTruncation" id="sales-table-prototype-2-title">
+                                                    <rect key="frame" x="16" y="10.333333333333336" width="161" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="03/11 · Mouse inalámbrico × 3" lineBreakMode="tailTruncation" id="sales-table-prototype-2-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="168.66666666666666" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="sales-table-prototype-2-detail" id="sales-table-prototype-2-detail-out"/>
+                                            <outlet property="textLabel" destination="sales-table-prototype-2-title" id="sales-table-prototype-2-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sale-3" textLabel="sales-table-prototype-3-title" detailTextLabel="sales-table-prototype-3-detail" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="sales-table-prototype-3">
+                                        <rect key="frame" x="20" y="171.33333206176758" width="353" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sales-table-prototype-3" id="sales-table-prototype-3-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="María Quispe     S/ 504.45" lineBreakMode="tailTruncation" id="sales-table-prototype-3-title">
+                                                    <rect key="frame" x="16" y="10.333333333333336" width="186.66666666666666" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="02/11 · Monitor 24” × 1 · Anulada" lineBreakMode="tailTruncation" id="sales-table-prototype-3-detail">
+                                                    <rect key="frame" x="16" y="30.999999999999996" width="183" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTextLabel" destination="sales-table-prototype-3-detail" id="sales-table-prototype-3-detail-out"/>
+                                            <outlet property="textLabel" destination="sales-table-prototype-3-title" id="sales-table-prototype-3-text-out"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Hoy   S/ 0.00   ·   Mes   S/ 0.00" lineBreakMode="tailTruncation" id="sales-totals">
+                                <rect key="frame" x="20" y="145" width="353" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="sales-sellers">
+                                <rect key="frame" x="16" y="250" width="361" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Todos"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filtersChanged:" destination="sales-vc" eventType="valueChanged" id="act-sales-sellers"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sales-safe"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mis ventas" id="sales-nav"/>
+                    <connections>
+                        <outlet property="periodControl" destination="sales-period" id="s-period-out"/>
+                        <outlet property="searchBar" destination="sales-search" id="s-search-out"/>
+                        <outlet property="sellersControl" destination="sales-sellers" id="s-sellers-out"/>
+                        <outlet property="table" destination="sales-table" id="s-table-out"/>
+                        <outlet property="totalsLabel" destination="sales-totals" id="s-totals-out"/>
+                        <segue destination="annul-vc" kind="show" identifier="showAnnul" id="sales-to-annul"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sales-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="1350"/>
+        </scene>
+        <!--Resumen-->
+        <scene sceneID="scene-dashboard">
+            <objects>
+                <viewController storyboardIdentifier="Dashboard" id="dashboard-vc" customClass="DashboardViewController" customModule="Ventas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dashboard-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Hola, Ana" lineBreakMode="tailTruncation" id="dashboard-greeting">
+                                <rect key="frame" x="24" y="96" width="345" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="▲ 12% vs ayer" lineBreakMode="tailTruncation" numberOfLines="0" id="dashboard-metrics">
+                                <rect key="frame" x="20" y="170" width="353" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ventas de los últimos 7 días" lineBreakMode="tailTruncation" id="dashboard-chart-title">
+                                <rect key="frame" x="24" y="252" width="345" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ranking de vendedores del mes" lineBreakMode="tailTruncation" numberOfLines="0" id="dashboard-ranking">
+                                <rect key="frame" x="24" y="490" width="345" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Stock bajo (≤ 5)" lineBreakMode="tailTruncation" numberOfLines="0" id="dashboard-lowstock">
+                                <rect key="frame" x="24" y="680" width="345" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Vendido hoy" lineBreakMode="tailTruncation" id="dashboard-today-title">
+                                <rect key="frame" x="20" y="108" width="177" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="S/ 701.98" lineBreakMode="tailTruncation" id="dashboard-today-value">
+                                <rect key="frame" x="20" y="132" width="177" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="IGV del mes" lineBreakMode="tailTruncation" id="dashboard-tax-title">
+                                <rect key="frame" x="196" y="108" width="177" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="S/ 734.10" lineBreakMode="tailTruncation" id="dashboard-tax-value">
+                                <rect key="frame" x="196" y="132" width="177" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Teclado mecánico · 4 u." lineBreakMode="tailTruncation" id="dashboard-lowstock-value">
+                                <rect key="frame" x="24" y="716" width="345" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" id="dashboard-ranking-values">
+                                <rect key="frame" x="24" y="535" width="345" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Carlos Ruiz · S/ 2,940.10
+Ana Díaz · S/ 1,872.20</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dashboard-safe"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Resumen" id="dashboard-nav"/>
+                    <connections>
+                        <outlet property="greetingLabel" destination="dashboard-greeting" id="d-greeting-out"/>
+                        <outlet property="lowStockLabel" destination="dashboard-lowstock-value" id="d-lowstock-out"/>
+                        <outlet property="soldTodayLabel" destination="dashboard-today-value" id="d-today-out"/>
+                        <outlet property="taxMonthLabel" destination="dashboard-tax-value" id="d-tax-out"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dashboard-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-147" y="1372"/>
+        </scene>
+        <!--Anular venta-->
+        <scene sceneID="scene-annul">
+            <objects>
+                <viewController storyboardIdentifier="AnnulSale" id="annul-vc" customClass="AnnulSaleViewController" customModule="Ventas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="annul-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Anular venta" textAlignment="center" lineBreakMode="tailTruncation" id="annul-title">
+                                <rect key="frame" x="24" y="104" width="345" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="El stock se devolverá al inventario." textAlignment="center" lineBreakMode="tailTruncation" id="annul-note">
+                                <rect key="frame" x="24" y="156" width="345" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Motivo obligatorio" id="annul-reason">
+                                <rect key="frame" x="24" y="219" width="345" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="reasonChanged:" destination="annul-vc" eventType="editingChanged" id="act-annul-reason"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="annul-cancel">
+                                <rect key="frame" x="24" y="298" width="160" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="annul-vc" eventType="touchUpInside" id="act-annul-close"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="annul-confirm">
+                                <rect key="frame" x="208" y="298" width="160" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Anular">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmCancellation:" destination="annul-vc" eventType="touchUpInside" id="act-annul-confirm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="annul-safe"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Anular venta" id="annul-nav"/>
+                    <connections>
+                        <outlet property="confirmButton" destination="annul-confirm" id="a-confirm-out"/>
+                        <outlet property="reasonField" destination="annul-reason" id="a-reason-out"/>
+                        <outlet property="summaryLabel" destination="annul-note" id="a-summary-out"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="annul-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="2050"/>
+        </scene>
+        <!--Cuenta-->
+        <scene sceneID="scene-account">
+            <objects>
+                <viewController storyboardIdentifier="Account" id="account-vc" customClass="AccountViewController" customModule="Ventas" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="account-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Cuenta" textAlignment="center" lineBreakMode="tailTruncation" id="account-title">
+                                <rect key="frame" x="24" y="98" width="345" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="account-logout">
+                                <rect key="frame" x="28" y="415" width="337" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cerrar sesión">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="account-vc" eventType="touchUpInside" id="act-logout"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Carlos Ruiz" textAlignment="center" lineBreakMode="tailTruncation" id="account-name">
+                                <rect key="frame" x="28" y="200" width="337" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="@carlos" textAlignment="center" lineBreakMode="tailTruncation" id="account-username">
+                                <rect key="frame" x="28" y="240" width="337" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Vendedor" textAlignment="center" lineBreakMode="tailTruncation" id="account-role">
+                                <rect key="frame" x="28" y="272" width="337" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="account-safe"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cuenta" id="account-nav"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="account-name" id="ac-name-out"/>
+                        <outlet property="roleLabel" destination="account-role" id="ac-role-out"/>
+                        <outlet property="usernameLabel" destination="account-username" id="ac-username-out"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="account-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3250" y="1350"/>
+        </scene>
+        <!--Productos-->
+        <scene sceneID="scene-ProductsNavigation">
+            <objects>
+                <navigationController storyboardIdentifier="ProductsNavigation" id="nav-products" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Productos" image="TabProducts" id="nav-products-tab"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-products-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="products-vc" kind="relationship" relationship="rootViewController" id="nav-products-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-products-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="650"/>
+        </scene>
+        <!--Clientes-->
+        <scene sceneID="scene-ClientsNavigation">
+            <objects>
+                <navigationController storyboardIdentifier="ClientsNavigation" id="nav-clients" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Clientes" image="TabClients" id="nav-clients-tab"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-clients-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="clients-vc" kind="relationship" relationship="rootViewController" id="nav-clients-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-clients-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="650"/>
+        </scene>
+        <!--Venta-->
+        <scene sceneID="scene-NewSaleNavigation">
+            <objects>
+                <navigationController storyboardIdentifier="NewSaleNavigation" id="nav-new-sale" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Venta" image="TabNewSale" id="nav-new-sale-tab"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-new-sale-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="newsale-vc" kind="relationship" relationship="rootViewController" id="nav-new-sale-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-new-sale-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2723" y="650"/>
+        </scene>
+        <!--Mis ventas-->
+        <scene sceneID="scene-SalesNavigation">
+            <objects>
+                <navigationController storyboardIdentifier="SalesNavigation" id="nav-sales" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mis ventas" image="TabSales" id="nav-sales-tab"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-sales-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sales-vc" kind="relationship" relationship="rootViewController" id="nav-sales-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-sales-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="650"/>
+        </scene>
+        <!--Resumen-->
+        <scene sceneID="scene-DashboardNavigation">
+            <objects>
+                <navigationController storyboardIdentifier="DashboardNavigation" id="nav-dashboard" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Resumen" image="TabSummary" id="nav-dashboard-tab"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-dashboard-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dashboard-vc" kind="relationship" relationship="rootViewController" id="nav-dashboard-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-dashboard-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431" y="650"/>
+        </scene>
+        <!--Cuenta-->
+        <scene sceneID="scene-AccountNavigation">
+            <objects>
+                <navigationController storyboardIdentifier="AccountNavigation" id="nav-account" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cuenta" image="TabAccount" id="nav-account-tab"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-account-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="account-vc" kind="relationship" relationship="rootViewController" id="nav-account-root"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-account-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3407" y="650"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="login-to-tabs"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="TabAccount" width="24" height="24"/>
+        <image name="TabClients" width="24" height="24"/>
+        <image name="TabNewSale" width="24" height="24"/>
+        <image name="TabProducts" width="24" height="24"/>
+        <image name="TabSales" width="24" height="24"/>
+        <image name="TabSummary" width="24" height="24"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
